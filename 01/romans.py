@@ -1,4 +1,4 @@
-def int_to_roman(num):
+++def int_to_roman(num):
     
     num2 = num // 1000
     num3 = (num % 1000) // 100
@@ -15,5 +15,31 @@ def int_to_roman(num):
     return(translate)
 pass 
 
-def roman_to_int(s):
+++def roman_to_int(s):
+    # Implemente sua função aqui
+    if not isinstance(s, str) or not s:
+        raise ValueError("Não pode estar vazio")
+    
+    roman_dict = {
+        'M': 1000, 'CM': 900,
+        'D': 500, 'CD': 400,
+        'C': 100, 'XC': 90,
+        'L': 50, 'XL': 40,
+        'X': 10, 'IX': 9,
+        'V': 5, 'IV': 4,
+        'I': 1
+    }
+    i = 0
+    num = 0
+    while i < len(s):
+        if i + 1 < len(s) and s[i:i+2] in roman_dict:
+            num += roman_dict[s[i:i+2]]
+            i += 2
+        else:
+            num += roman_dict[s[i]]
+            i += 1
+    return num
+
+    print(int_to_roman(x))
+    print(roman_to_int(x))
    
