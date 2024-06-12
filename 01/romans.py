@@ -13,7 +13,6 @@
     translate = milhar[num2] + centena[num3] + dezena[num4] + unidade[num5]
 
     return(translate)
-pass 
 
 ++def roman_to_int(s):
     # Implemente sua função aqui
