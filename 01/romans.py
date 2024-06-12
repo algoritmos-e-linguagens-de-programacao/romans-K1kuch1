@@ -40,6 +40,5 @@ pass
             i += 1
     return num
 
-    print(int_to_roman(x))
-    print(roman_to_int(x))
+    
    
